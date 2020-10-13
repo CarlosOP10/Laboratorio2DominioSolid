@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio2DiseñoDominioSolid", "Laboratorio2DiseñoDominioSolid\Laboratorio2DiseñoDominioSolid.csproj", "{04F8FA74-CEE9-4113-9E19-A1972C8C961F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04F8FA74-CEE9-4113-9E19-A1972C8C961F}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{04F8FA74-CEE9-4113-9E19-A1972C8C961F}.Debug|anycpu.Build.0 = Debug|anycpu
+		{04F8FA74-CEE9-4113-9E19-A1972C8C961F}.Release|anycpu.ActiveCfg = Release|anycpu
+		{04F8FA74-CEE9-4113-9E19-A1972C8C961F}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
