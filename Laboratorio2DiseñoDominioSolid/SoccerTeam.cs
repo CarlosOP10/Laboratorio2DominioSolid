@@ -3,8 +3,8 @@ namespace Laboratorio2DiseñoDominioSolid
 {
     public class SoccerTeam:Team
     {
-        private string Coach { get; set; }
-        private string President { get; set; }
+        public string Coach { get; set; }
+        public string President { get; set; }
         public SoccerTeam()
         {
             Coach = "";
@@ -25,11 +25,8 @@ namespace Laboratorio2DiseñoDominioSolid
             base.ShowData();
             Console.WriteLine("Entrenador: " + Coach);
             Console.WriteLine("Presidente: " + President);
-            Console.WriteLine("----------Lista de Jugadores------");
-            foreach (var player in players)
-            {
-                player.ShowDataSoccerPlayer();
-            }
+            
+            
         }
         public override void RegisterPlayers()
         {
@@ -42,6 +39,14 @@ namespace Laboratorio2DiseñoDominioSolid
         public override void Fichar(SoccerPlayer soccerPlayer)
         {
             players.Add(soccerPlayer);
+        }
+        public void ShowSoccerPlayes()
+        {
+            
+            foreach (var player in players)
+            {
+                player.ShowDataSoccerPlayer();
+            }
         }
     }
 }

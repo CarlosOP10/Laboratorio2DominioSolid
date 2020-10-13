@@ -6,10 +6,10 @@ namespace Laboratorio2DiseñoDominioSolid
     {
         public static void Main(string[] args)
         {
-            Team teamSoccer = new SoccerTeam();
-            //teamSoccer.RegisterData();
-            teamSoccer.RegisterPlayers();
-            teamSoccer.ShowData();
+            SoccerChampionship soccerChampionship = new SoccerChampionship();
+            //soccerChampionship.RegisterData();
+            soccerChampionship.Menu();
+
             
         }
     }

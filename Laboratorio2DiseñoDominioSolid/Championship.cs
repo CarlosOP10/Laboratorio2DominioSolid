@@ -1,10 +1,18 @@
 ﻿using System;
-namespace Laboratorio2DiseñoDominioSolid.Properties
+using System.Collections.Generic;
+
+namespace Laboratorio2DiseñoDominioSolid
 {
-    public class Championship
+    public abstract class Championship
     {
+        protected abstract string Name { get; set; }
+        protected abstract IList<SoccerTeam> Teams { get; set; }
         public Championship()
         {
         }
+        public abstract void ShowData();
+        public abstract void RegisterData();
+        public abstract void RegisterTeam(SoccerTeam team);
+        
     }
 }

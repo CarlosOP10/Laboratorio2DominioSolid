@@ -5,8 +5,8 @@ namespace Laboratorio2DiseñoDominioSolid
 {
     public class Team
     {
-        protected string TeamName { get; set; }
-        protected IList<SoccerPlayer> players;
+        public string TeamName { get; set; }
+        public IList<SoccerPlayer> players;
         public Team()
         {
             TeamName = "";
@@ -62,7 +62,7 @@ namespace Laboratorio2DiseñoDominioSolid
             Console.WriteLine("Nombre equipo: "+TeamName); 
         }
 
-        public virtual void RegisterPlayers(){} 
+        public virtual void RegisterPlayers() {}
 
 
     }
