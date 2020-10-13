@@ -7,6 +7,9 @@ namespace Laboratorio2DiseñoDominioSolid
     {
         protected override string Name { get; set; }
         protected override IList<Team> Teams { get; set; }
+        public string President { get; set; }
+        public string DataInitial { get; set; }
+        public string DataFinish { get; set; }
 
         public SoccerChampionship()
         {
@@ -20,8 +23,14 @@ namespace Laboratorio2DiseñoDominioSolid
 
         public override void RegisterData()
         {
-            Console.WriteLine("Ingrese Nombre del Campeonato");
+            Console.Write("Ingrese Nombre del Campeonato: ");
             Name = Console.ReadLine();
+            Console.Write("Ingrese Nombre del Presidente: ");
+            President = Console.ReadLine();
+            Console.Write("Ingrese la fecha de inicio: ");
+            DataInitial = Console.ReadLine();
+            Console.Write("Ingrese la fecha de fin: ");
+            DataFinish = Console.ReadLine();
         }
 
         public override void RegisterTeam(SoccerTeam team)
@@ -31,8 +40,12 @@ namespace Laboratorio2DiseñoDominioSolid
 
         public override void ShowData()
         {
+            Console.WriteLine("----Datos del Campeonato----");
             Console.WriteLine("Nombre del Campeonato: " + Name);
-            Console.WriteLine("-------Lista de Equipos--------");
+            Console.WriteLine("Nombre del Presidente: " + President);
+            Console.WriteLine("Fecha Inicio: " + DataInitial);
+            Console.WriteLine("Fecha Final: " + DataFinish);
+
         }
         public void ShowTeams()
         {
@@ -41,7 +54,7 @@ namespace Laboratorio2DiseñoDominioSolid
                 team.ShowData();
             }
         }
-        public SoccerTeam FindTeam(string name)
+        public Team FindTeam(string name)
         {
             foreach(var team in Teams)
             {
@@ -59,7 +72,7 @@ namespace Laboratorio2DiseñoDominioSolid
         public void ShowPlayersToTeam()
         {
             string Nombre;
-            Console.WriteLine("Ingrese el Nombre del equipo");
+            Console.Write("Ingrese el Nombre del equipo: ");
             Nombre = Console.ReadLine();
             Console.WriteLine("----------Lista de Jugadores------");
             var team = FindTeam(Nombre);
@@ -71,7 +84,7 @@ namespace Laboratorio2DiseñoDominioSolid
         public void AddPlayerToTeam()
         {
             string Nombre;
-            Console.WriteLine("Ingrese el Nombre del equipo");
+            Console.Write("Ingrese el Nombre del equipo: ");
             Nombre = Console.ReadLine();
             Console.WriteLine("----------Lista de Jugadores------");
             var team = FindTeam(Nombre);
@@ -91,24 +104,28 @@ namespace Laboratorio2DiseñoDominioSolid
             do
             {
                 Console.WriteLine("--------Menu--------");
-                Console.WriteLine("1. Añadir equipo");
-                Console.WriteLine("2. Mostrar Equipos");
-                Console.WriteLine("3. Mostrar Jugadores de un equipo");
-                Console.WriteLine("4. Añadir Jugador a un equipo");
+                Console.WriteLine("1. Mostrar Datos del Campeonato");
+                Console.WriteLine("2. Añadir equipo");
+                Console.WriteLine("3. Mostrar Equipos");
+                Console.WriteLine("4. Mostrar Jugadores de un equipo");
+                Console.WriteLine("5. Añadir Jugador a un equipo");
                 Console.WriteLine("0. Salir");
                 Opcion = Convert.ToInt16(Console.ReadLine());
                 switch (Opcion)
                 {
                     case 1:
-                        AddTeam();
+                        ShowData();
                         break;
                     case 2:
-                        ShowTeams();
+                        AddTeam();
                         break;
                     case 3:
-                        ShowPlayersToTeam();
+                        ShowTeams();
                         break;
                     case 4:
+                        ShowPlayersToTeam();
+                        break;
+                    case 5:
                         AddPlayerToTeam();
                         break;
                     default:

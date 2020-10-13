@@ -3,8 +3,7 @@ namespace Laboratorio2DiseñoDominioSolid
 {
     public class SoccerTeam:Team
     {
-        public string Coach { get; set; }
-        public string President { get; set; }
+        
         public SoccerTeam()
         {
             Coach = "";
@@ -40,7 +39,7 @@ namespace Laboratorio2DiseñoDominioSolid
         {
             players.Add(soccerPlayer);
         }
-        public void ShowSoccerPlayes()
+        public override void ShowSoccerPlayes()
         {
             
             foreach (var player in players)

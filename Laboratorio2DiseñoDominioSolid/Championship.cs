@@ -6,7 +6,7 @@ namespace Laboratorio2DiseñoDominioSolid
     public abstract class Championship
     {
         protected abstract string Name { get; set; }
-        protected abstract IList<SoccerTeam> Teams { get; set; }
+        protected abstract IList<Team> Teams { get; set; }
         public Championship()
         {
         }

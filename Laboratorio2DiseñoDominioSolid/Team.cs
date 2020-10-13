@@ -6,6 +6,8 @@ namespace Laboratorio2DiseñoDominioSolid
     public class Team
     {
         public string TeamName { get; set; }
+        public string Coach { get; set; }
+        public string President { get; set; }
         public IList<SoccerPlayer> players;
         public Team()
         {
@@ -63,7 +65,7 @@ namespace Laboratorio2DiseñoDominioSolid
         }
 
         public virtual void RegisterPlayers() {}
-
+        public virtual void ShowSoccerPlayes() {}
 
     }
 }

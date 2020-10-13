@@ -7,9 +7,8 @@ namespace Laboratorio2DiseñoDominioSolid
         public static void Main(string[] args)
         {
             SoccerChampionship soccerChampionship = new SoccerChampionship();
-            //soccerChampionship.RegisterData();
+            soccerChampionship.RegisterData();
             soccerChampionship.Menu();
-
             
         }
     }
