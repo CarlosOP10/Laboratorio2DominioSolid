@@ -6,17 +6,16 @@ namespace Laboratorio2DiseñoDominioSolid
     public class SoccerChampionship:Championship
     {
         protected override string Name { get; set; }
-        protected override IList<SoccerTeam> Teams { get; set; }
+        protected override IList<Team> Teams { get; set; }
 
         public SoccerChampionship()
         {
-            Teams = new List<SoccerTeam>();
-            SoccerTeam soccerTeam = new SoccerTeam();
+            Teams = new List<Team>();
+            Team soccerTeam = new SoccerTeam();
             soccerTeam.TeamName = "Real Madrid";
             soccerTeam.Coach = "Zidane";
             soccerTeam.President = "Florentino";
             Teams.Add(soccerTeam);
-            
         }
 
         public override void RegisterData()
@@ -53,7 +52,7 @@ namespace Laboratorio2DiseñoDominioSolid
         }
         public void AddTeam()
         {
-            SoccerTeam soccerTeam = new SoccerTeam();
+            Team soccerTeam = new SoccerTeam();
             soccerTeam.RegisterData();
             Teams.Add(soccerTeam);
         }
